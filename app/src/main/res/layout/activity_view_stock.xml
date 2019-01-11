@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--This TextView shows the title of the Activity -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="@string/stockInfo"
+        android:textSize="40sp"/>
+
+    <!--This TextView is a header that informs the user that bellow is the company name -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/companyName"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+    <!--This TextView shows the company name of the selected stock -->
+    <TextView
+        android:id="@+id/companyTextPortfolio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="15sp" />
+
+    <!--This TextView is a header that informs the user that bellow is the stock ticker -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/ticker"
+        android:gravity="center"
+        android:textSize="25sp" />
+
+    <!--This TextView shows the ticker of the selected stock-->
+    <TextView
+        android:id="@+id/tickerTextPortfolio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="15sp" />
+
+    <!--This TextView is a header that informs the user that bellow is the stock price -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/price"
+        android:gravity="center"
+        android:textSize="25sp" />
+
+    <!--This TextView shows the price of the selected stock -->
+    <TextView
+        android:id="@+id/priceTextPortfolio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="15sp" />
+
+    <!--This TextView is a header that informs the user that bellow is the currency type -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/currencyType"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+    <!--This TextView shows the currency type of the selected stock -->
+    <TextView
+        android:id="@+id/currencyTextPortfolio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="15sp" />
+
+    <!--This TextView is a header that informs the user that bellow is the stock exchange -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/quantity"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+    <!--This TextView shows the stock exchange of the selected stock -->
+    <TextView
+        android:id="@+id/quantityTextPortfolio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="@string/buysell"/>
+
+    <EditText
+        android:id="@+id/quantity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="@string/stockhint"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/buy"
+            android:onClick="buyStocks"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/sell"
+            android:onClick="sellStocks"/>
+
+    </LinearLayout>
+
+</LinearLayout>

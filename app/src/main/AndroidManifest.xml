@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dawson.fesamm">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StockActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".ChosenStockActivity" />
+        <activity android:name=".StockInformationActivity" />
+        <activity android:name=".FinancialHintsActivity"></activity>
+        <activity
+            android:name=".LoanCalcActivity"
+            android:label="@string/loancalcactivityname" />
+
+
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/title_activity_menu" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about" />
+        <activity
+            android:name=".ForeignExchangeActivity"
+            android:label="@string/foreignexchangeactivityname"/>
+        <activity
+            android:name=".NotesActivity"
+            android:label="@string/title_activity_notes" />
+        <activity
+            android:name=".ViewNoteActivity"
+            android:label="@string/title_activity_view_note" />
+        <activity
+            android:name=".PortfolioActivity"
+            android:label="@string/title_activity_portfolio" />
+        <activity
+            android:name=".ViewStockActivity"
+            android:label="@string/title_activity_view_stock">
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

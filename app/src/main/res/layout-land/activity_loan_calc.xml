@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--This LinearLayout will hold the top part of the layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+        <!--This LinearLayout will hold the data about Loan amount -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/loanAmount"/>
+            <EditText
+                android:id="@+id/loanAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/loanAmountHint"
+                android:inputType="number"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <!--This LinearLayout will hold the data about years -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/termOfLoan"/>
+            <Spinner
+                android:id="@+id/termOfLoan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/termOfLoanHint"
+                android:entries="@array/loan_term_array"
+                android:prompt="@string/termOfLoanHint"
+                android:inputType="number"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <!--This LinearLayout will hold the data about monthly payments-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/minimum_monthly_amount"/>
+            <EditText
+                android:id="@+id/minimum_monthly_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/minimum_monthly_amount_hint"
+                android:inputType="number"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <!--This LinearLayout will hold the data about yearly interest rate -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/yearlyRate"/>
+            <EditText
+                android:id="@+id/yearlyRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/yearlyRateHint"
+                android:inputType="number"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <!--This LinearLayout will hold the buttons for calculation-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <Button
+                android:onClick="calculate"
+                android:id="@+id/calculateBtn"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/calculateBtn"/>
+            <Button
+                android:onClick="clear"
+                android:id="@+id/clearBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/clearBtn"/>
+
+        </LinearLayout>
+        <!--This LinearLayout will hold the result of final credit amount-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/results"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/monthlyPayment"/>
+            <TextView
+                android:id="@+id/finalCreditAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <!--This LinearLayout will hold the data about alredy payed months-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/totalPayment"/>
+            <TextView
+                android:id="@+id/totalPayment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <!--This LinearLayout will hold the data about total interest-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/totoalInterst"/>
+            <TextView
+                android:id="@+id/totoalInterst"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/compose" />
+
+
+
+</RelativeLayout>

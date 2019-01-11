@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "816244429625",
+    "firebase_url": "https://fesamm-3d8dc.firebaseio.com",
+    "project_id": "fesamm-3d8dc",
+    "storage_bucket": "fesamm-3d8dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816244429625:android:ea29bb60cc0a5b19",
+        "android_client_info": {
+          "package_name": "com.dawson.fesamm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816244429625-jukackvjc9okf1i36f9dfkmpthni7d7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1vKCK1MGKmD9_lXXBYnnPm1J3L_94Ss8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

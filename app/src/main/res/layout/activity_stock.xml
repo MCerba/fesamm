@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StockActivity">
+
+    <!--This TextView shows the Title of the Activity-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="@string/stockQuote"
+        android:gravity="center"
+        android:textSize="40sp"/>
+
+    <!--This TextView informs the user that he can enter up to 5 tickers-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/stockDescription"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <!--This LinearLayout contains a EditText and a Button to allow the user to input a ticker and
+    add it -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.4"
+        android:orientation="horizontal">
+
+        <!--This EditText allows the user to input the ticker they want to add -->
+        <EditText
+            android:id="@+id/inputStock"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="@string/stockInputHint"/>
+
+        <!--This Button adds the ticker to a List. It has a onClick which will take the input and
+        add it to the List. The button has a custom shape, background and border-->
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/addBtn"
+            android:background="@drawable/rounded_button"
+            android:enabled="false"
+            android:onClick="addTicker"/>
+
+    </LinearLayout>
+
+    <!--This TextView informs the user that the section bellow is the List of all the chosen tickers-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/chosenTickers"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+    <!--This TextView informs the user that they can click on any selected ticker to delete it -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/removeTickerText"
+        android:gravity="center"
+        android:textSize="15sp"/>
+
+    <!--This ListView shows all the selected tickers-->
+    <ListView
+        android:id="@+id/tickerList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"></ListView>
+
+    <!--This button search for the chosen tickers. It opens 'ChosenStockActivity'. The button has
+    a custom shape, background and border-->
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/searchBtn"
+        android:background="@drawable/rounded_button"
+        android:onClick="showChosenTickers"
+        android:enabled="false"/>
+
+</LinearLayout>

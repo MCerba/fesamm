@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">fesamm</string>
+    <string name="stockQuote">Stock Quote</string>
+    <string name="stockDescription">You can enter up to 5 stock tickers</string>
+    <string name="stockInputHint">Example: \'AAPL\'</string>
+    <string name="addBtn">Add</string>
+    <string name="chosenTickers">Chosen Tickers</string>
+    <string name="backBtn">Back</string>
+    <string name="searchBtn">Search</string>
+    <string name="removeTickerText">(Click on a ticker to remove it)</string>
+    <string name="ticker">Ticker</string>
+    <string name="companyName">Company Name</string>
+    <string name="currentPrice">Current Price</string>
+    <string name="currencyType">Currency Type</string>
+    <string name="stockExchange">Stock Exchange</string>
+    <string name="stockInfo">Stock Information</string>
+    <string name="newHintBtn">New Hint</string>
+    <string name="sendBtn">Send</string>
+    <string name="fullArticle">Full Article</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="foreignExchange">Foreign Exchange</string>
+    <string name="stock">Stock Quote</string>
+    <string name="notes">Notes</string>
+    <string name="loanCalc">Loan Calculator</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="financialHints">Financial Hints</string>
+    <string name="balance">Balance: </string>
+
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="delete">C</string>
+    <string name="dot">.</string>
+    <string name="foreignexchangeactivityname">ForeignExchangeActivity</string>
+    <string name="usd">USD</string>
+    <string name="unitedstates">United States Dollar</string>
+
+    <string name="loancalcactivityname">LoanCalcActivity</string>
+    <string name="loanCalcActivityname">LoanCalcActivity</string>
+    <string name="loanAmount">Loan Amount</string>
+    <string name="loanAmountHint">$50 000</string>
+    <string name="termOfLoan">Calculate after:(years)</string>
+    <string name="termOfLoanHint">$20</string>
+    <string name="yearlyRate">Yearly Interest Rate</string>
+    <string name="yearlyRateHint">20%</string>
+    <string name="calculateBtn">Calculate</string>
+    <string name="clearBtn">Clear</string>
+    <string name="monthlyPayment">Final Credit Amount: </string>
+    <string name="totalPayment">Already payed: </string>
+    <string name="totoalInterst">Total Interest: </string>
+    <string name="results">Results</string>
+    <string name="contacts_dialog">Choose a Receiver from your contacts</string>
+    <string name="minimum_monthly_amount">Monthly Payments:</string>
+    <string name="minimum_monthly_amount_hint">$100</string>
+    <string name="search_hint">Search through contacts which have emails...</string>
+    <string name="search_button">Search</string>
+    <string-array name="loan_term_array">
+        <item>1 year</item>
+        <item>5 years</item>
+        <item>10 years</item>
+    </string-array>
+
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Strings for the menu -->
+    <string name="aboutMenu">About</string>
+    <string name="dawsonMenu">Dawson</string>
+    <string name="settingsMenu">Settings</string>
+    <string name="title_activity_about">AboutActivity</string>
+
+    <!-- Strings for settings -->
+    <string name="fnameTxt">First Name: </string>
+    <string name="lnameTxt">Last Name: </string>
+    <string name="emailTxt">Email Address: </string>
+    <string name="passwordTxt">Password: </string>
+    <string name="currencyTxt">Preferred Currency: </string>
+    <string name="stockTxt">Preferred Stock: </string>
+    <string name="saveSettings">Save</string>
+    <string name="unsavedSettingsMsg">Your changes will not be saved!</string>
+    <string name="discardChanges">Changes Discarded</string>
+    <string name="backPressed">Are you sure you want to discard your changes?</string>
+    <string name="discard">Discard</string>
+    <string name="save">Save Changes</string>
+
+    <!-- Strings for About -->
+    <string name="aboutDescrip">Hi! This app is the final project for our Mobile Software Development course.
+    This app will give you great tools like calculating a loan, convert currencies, and motivate your financially
+    to always do better </string>
+    <string name="dawsonInfo">Dawson College, 420-518-DW MOBILE SOFTWARE DEVELOPMENT</string>
+    <string name="names">Alpha, Mihail, Mohamed, Sonya</string>
+    <string name="dialogTitle">About our Team</string>
+    <string name="dialogText">We are four passionate programmers who like building apps and stuff.</string>
+    <string name="title_activity_notes">NotesActivity</string>
+
+    <string name="addNoteBtn">Add Note</string>
+    <string name="title_activity_view_note">ViewNoteActivity</string>
+
+    <!-- Strings for view note -->
+    <string name="saveChanges">Save Changes</string>
+    <string name="deleteNote">Delete Note</string>
+    <string name="cancel">Cencel</string>
+    <string name="title_activity_portfolio">PortfolioActivity</string>
+
+    <!-- Strings for portfolio -->
+    <string name="buyBtn">Buy More Stocks</string>
+    <string name="title_activity_view_stock">ViewStockActivity</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="buysell">Amount of stocks to buy or sell</string>
+    <string name="stockhint">Example: \'1\'</string>
+    <string name="buy">Buy</string>
+    <string name="sell">Sell</string>
+
+    <string name="invailidCredMsg">Your email or password are invalid. Please go to the settings and fix it.</string>
+    <string name="goSettings">Go To Settings</string>
+    <string name="leavePortfolio">Leave the Portfolio</string>
+
+</resources>

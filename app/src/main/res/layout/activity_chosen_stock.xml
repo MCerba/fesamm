@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChosenStockActivity">
+
+    <!--This TextView will show different information based on the search result.
+    If the user is connected to the internet it will show the number of found stock.
+    If the user is not connected to the internet it will show the user an appropriate text.
+    If anything happens while retrieving the information from the api it will show an appropriate text-->
+    <TextView
+        android:id="@+id/stocksFound"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+    <!--This ListView shows the found stock. If the user clicks on one of the stock, it will open
+     'StockInformationActivity' which will show the information about the selected stock-->
+    <ListView
+        android:id="@+id/chosenTickersList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></ListView>
+
+</LinearLayout>

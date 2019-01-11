@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="numbersSize">60sp</dimen>
+    <dimen name="tocurrencytxt">40sp</dimen>
+    <dimen name="tocurrencynametxt">20sp</dimen>
+</resources>

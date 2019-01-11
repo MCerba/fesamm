@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForeignExchangeActivity">
+
+    <!--This LinearLayout holds all of the content for this activity-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginStart="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!--This RelativeLayout will hold the top part of the layout-->
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="234dp">
+
+            <!--This EditText will contain the amount converted-->
+            <EditText
+                android:id="@+id/toAmount"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toCurrencyName"
+                android:layout_centerHorizontal="true"
+                android:editable="false"
+                android:ems="10"
+                android:focusable="auto"
+                android:gravity="end"
+                android:hint="@string/zero"
+                android:inputType="none"
+                android:textSize="25sp" />
+
+            <!--This TextView will contain the 'TO' currency (the currency to convert to)-->
+            <TextView
+                android:id="@+id/toCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="53dp"
+                android:onClick="currencyToChange"
+                android:text="@string/usd"
+                android:textSize="@dimen/tocurrencytxt" />
+
+            <!--This view is simply a line which is only there for aesthetic reasons-->
+            <View
+                android:id="@+id/line_right"
+                android:layout_width="160dp"
+                android:layout_height="2dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/black" />
+
+            <!--This view is simply a line which is only there for aesthetic reasons-->
+            <View
+                android:id="@+id/line_left"
+                android:layout_width="160dp"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@color/black" />
+
+            <!--This ImageButton will be used to switch the currencies-->
+            <ImageButton
+                android:id="@+id/switchBtn"
+                android:layout_width="40dp"
+                android:layout_height="46dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:onClick="switchCurrencies"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/switchbtn" />
+
+            <!--This TextView will contain the 'FROM' currency (the base currency)-->
+            <TextView
+                android:id="@+id/fromCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:onClick="currencyFromChange"
+                android:textSize="40sp" />
+
+            <!--This TextView will contain the 'TO' currency name (i.e. United States Dollar for USD)-->
+            <TextView
+                android:id="@+id/toCurrencyName"
+                android:layout_width="272dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/line_right"
+                android:layout_alignStart="@+id/line_right"
+                android:layout_below="@+id/switchBtn"
+                android:layout_marginLeft="-130dp"
+                android:layout_marginStart="-130dp"
+                android:gravity="end"
+                android:text="@string/unitedstates"
+                android:textSize="@dimen/tocurrencynametxt" />
+
+            <!--This TextView will contain the 'FROM' currency name (i.e. Canadian Dollar for CAD)-->
+            <TextView
+                android:id="@+id/fromCurrencyName"
+                android:layout_width="271dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/line_right"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/line_right"
+                android:layout_marginLeft="-130dp"
+                android:layout_marginStart="-130dp"
+                android:layout_marginTop="14dp"
+                android:gravity="end"
+                android:textSize="20sp" />
+
+            <!--This EditText will contain the amount to convert-->
+            <EditText
+                android:id="@+id/fromAmount"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/switchBtn"
+                android:layout_centerHorizontal="true"
+                android:editable="false"
+                android:ems="10"
+                android:focusable="auto"
+                android:gravity="end"
+                android:hint="@string/zero"
+                android:inputType="none"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+
+        <!--This LinearLayout will hold the bottom part of the layout, it is composed of many linear layouts that will contain a number
+        These numbers will be clickable and they'll be used to input the amount to convert-->
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/one"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/two"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/three"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/four"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/five"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/five"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/six"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/six"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/seven"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/seven"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/eight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/eight"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/nine"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/delete"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/zero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/zero"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom|center"
+                        android:text="@string/dot"
+                        android:textSize="@dimen/numbersSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
